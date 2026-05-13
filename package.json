@@ -1,0 +1,13 @@
+{
+  "name": "projeto-ticket--suporte",
+  "version": "1.0.0",
+  "description": "Api de gerenciamento de tickets de suporte",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.js"
+  },
+  "keywords": [],
+  "author": "Janailson alves",
+  "license": "ISC"
+}
