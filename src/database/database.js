@@ -33,6 +33,12 @@ export class Database {
         
         this.#persist()
     }
+
+    // método para selecionar e mostrar os registros do banco de dados
+    select(table) {
+        let data = this.#database[table] ?? []
+        return data
+    }
     
 
 }
