@@ -21,7 +21,7 @@ export function routeHandler(request, response) {
 
         request.query = query ? extractQueryParams(query) : {} 
 
-        console.log(extractQueryParams(query))
+        extractQueryParams(query)
 
         route.controller({request, response, database}) 
     } else {

@@ -35,8 +35,19 @@ export class Database {
     }
 
     // método para selecionar e mostrar os registros do banco de dados
-    select(table) {
+    select(table, filters) {
         let data = this.#database[table] ?? []
+
+        if (filters) {
+            data = data.filter((row) => {
+                const test = Object.entries(filters).some(([key, value]) => {
+                    return row[key] ? String(row[key]).toLowerCase().includes(String(value).toLowerCase()) : false
+                })
+
+                console.log(test)
+                return test
+        })}
+
         return data
     }
     
